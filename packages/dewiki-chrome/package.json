@@ -1,0 +1,72 @@
+{
+    "name": "@plurid/dewiki-chrome",
+    "version": "0.1.0",
+    "description": "Chrome Extension for Dewiki",
+    "keywords": [
+        "dewiki",
+        "plurid"
+    ],
+    "author": "Jan Cavel <caveljan@plurid.com> (https://plurid.com)",
+    "license": "MIT",
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/plurid/dewiki"
+    },
+    "bugs": {
+        "email": "feedback@plurid.com",
+        "url": "https://github.com/plurid/dewiki/issues"
+    },
+    "homepage": "https://plurid.com/dewiki",
+    "files": [
+        "distribution/"
+    ],
+    "scripts": {
+        "e2e-test": "jest __e2e-tests__ --runInBand --silent",
+        "unit-test": "jest __tests__/.*.spec.js --silent",
+        "test": "npm run unit-test && npm run e2e-test",
+        "test.jest": "jest",
+        "test.production": "NODE_ENV=production npm run unit-test && npm run e2e-test",
+        "lint": "eslint --quiet -f codeframe src",
+        "clean": "rm -rf distribution && rm -rf distribution-zip && rm -rf build",
+        "develop": "yarn clean && NODE_ENV=development webpack --watch",
+        "build": "yarn clean && NODE_ENV=production webpack",
+        "distribute": "yarn clean && NODE_ENV=production webpack && node scripts/zip.js"
+    },
+    "dependencies": {
+        "@plurid/plurid-functions": "^0.1.1",
+        "@plurid/plurid-themes": "^0.1.18",
+        "@plurid/plurid-ui-react": "^0.1.34",
+        "apollo-cache-inmemory": "^1.6.3",
+        "apollo-client": "^2.6.4",
+        "apollo-link-http": "^1.5.16",
+        "graphql": "^14.5.8",
+        "graphql-tag": "^2.10.1",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0",
+        "styled-components": "^4.4.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.7.5",
+        "@babel/preset-env": "^7.7.6",
+        "@babel/preset-react": "^7.7.4",
+        "@babel/preset-typescript": "^7.7.4",
+        "@babel/register": "^7.7.4",
+        "@types/chrome": "^0.0.91",
+        "@types/jest": "^24.0.23",
+        "@types/node": "^12.12.17",
+        "@types/react": "^16.9.16",
+        "@types/react-dom": "^16.9.4",
+        "@types/styled-components": "^4.4.1",
+        "copy-webpack-plugin": "^5.1.1",
+        "css-loader": "^3.3.2",
+        "html-webpack-plugin": "^3.2.0",
+        "jest": "^24.9.0",
+        "ts-jest": "^24.2.0",
+        "ts-loader": "^6.2.1",
+        "typescript": "^3.7.3",
+        "webpack": "^4.41.2",
+        "webpack-cli": "^3.3.10",
+        "zip-folder": "^1.0.0"
+    }
+}
