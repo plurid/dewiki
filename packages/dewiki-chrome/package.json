@@ -6,7 +6,7 @@
         "dewiki",
         "plurid"
     ],
-    "author": "Jan Cavel <caveljan@plurid.com> (https://plurid.com)",
+    "author": "ly3xqhl8g9 <ly3xqhl8g9@plurid.com> (https://plurid.com)",
     "license": "MIT",
     "private": true,
     "repository": {
@@ -14,7 +14,7 @@
         "url": "https://github.com/plurid/dewiki"
     },
     "bugs": {
-        "email": "feedback@plurid.com",
+        "email": "source@plurid.com",
         "url": "https://github.com/plurid/dewiki/issues"
     },
     "homepage": "https://plurid.com/dewiki",
